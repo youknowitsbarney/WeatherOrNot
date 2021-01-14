@@ -78,10 +78,11 @@ extension CityDetailsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        guard let viewModel = self.viewModel,
-              let forecast = viewModel.forecast else { return 0 }
+        let viewModel = self.viewModel
+    
+        let forecast = viewModel?.forecast //Why is it nil?????
         
-        return forecast.list[0].details.count
+        return forecast?.list[0].details.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

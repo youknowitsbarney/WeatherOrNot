@@ -7,6 +7,14 @@
 
 import Foundation
 
+//
+//  Forecast.swift
+//  WeatherOrNot
+//
+//  Created by Barney on 13/01/2021.
+//
+import Foundation
+
 // MARK: Forecast model
 struct Forecast: Codable {
     
