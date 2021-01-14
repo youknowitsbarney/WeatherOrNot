@@ -24,9 +24,12 @@ class CityDetailsViewController: UIViewController {
 
         guard let city = self.viewModel?.city else { return }
         
+        let sunrise = Date(timeIntervalSince1970: Double(city.sys.sunrise))
+        let sunset = Date(timeIntervalSince1970: Double(city.sys.sunset))
+        
         cityNameLabel.text = city.name
-        sunriseLabel.text = String(city.sys.sunrise)
-        sunsetLabel.text = String(city.sys.sunset)
+        sunriseLabel.text = Date.formatDate(date: sunrise)
+        sunsetLabel.text = Date.formatDate(date: sunset)
 //        tempLabel.text = city.
         
         tableViewSetup()

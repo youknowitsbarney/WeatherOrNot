@@ -25,6 +25,7 @@
 		1A804AFF25AF4E1500EA059B /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804AFE25AF4E1500EA059B /* HomeScreenViewModel.swift */; };
 		1A8BF1BE25B0359E003FF4F0 /* WeatherOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BF1BD25B0359E003FF4F0 /* WeatherOrNotTests.swift */; };
 		1A8BF1C925B03BD3003FF4F0 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BF1C825B03BD3003FF4F0 /* UIViewController+Alert.swift */; };
+		1A8BF1D125B03F23003FF4F0 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BF1D025B03F23003FF4F0 /* Date+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		1A804AFE25AF4E1500EA059B /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		1A8BF1BD25B0359E003FF4F0 /* WeatherOrNotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOrNotTests.swift; sourceTree = "<group>"; };
 		1A8BF1C825B03BD3003FF4F0 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		1A8BF1D025B03F23003FF4F0 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1A804A8925AEF4DF00EA059B /* AppDelegate.swift */,
+				1A8BF1D025B03F23003FF4F0 /* Date+.swift */,
 				1A804A8B25AEF4DF00EA059B /* SceneDelegate.swift */,
 			);
 			path = Global;
@@ -326,6 +329,7 @@
 				1A804A8A25AEF4DF00EA059B /* AppDelegate.swift in Sources */,
 				1A7E3C1825B0012A00D00810 /* DayForecastTableViewCell.swift in Sources */,
 				1A804A8C25AEF4DF00EA059B /* SceneDelegate.swift in Sources */,
+				1A8BF1D125B03F23003FF4F0 /* Date+.swift in Sources */,
 				1A804ADB25AF2F6400EA059B /* HelpPageViewController.swift in Sources */,
 				1A804ACE25AF07B100EA059B /* Forecast.swift in Sources */,
 				1A804AEC25AF3D9400EA059B /* CityDetailsViewModel.swift in Sources */,
