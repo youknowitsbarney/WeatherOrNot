@@ -24,6 +24,7 @@
 		1A804AEC25AF3D9400EA059B /* CityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804AEB25AF3D9400EA059B /* CityDetailsViewModel.swift */; };
 		1A804AFF25AF4E1500EA059B /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804AFE25AF4E1500EA059B /* HomeScreenViewModel.swift */; };
 		1A8BF1BE25B0359E003FF4F0 /* WeatherOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BF1BD25B0359E003FF4F0 /* WeatherOrNotTests.swift */; };
+		1A8BF1C925B03BD3003FF4F0 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BF1C825B03BD3003FF4F0 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		1A804AEB25AF3D9400EA059B /* CityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewModel.swift; sourceTree = "<group>"; };
 		1A804AFE25AF4E1500EA059B /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		1A8BF1BD25B0359E003FF4F0 /* WeatherOrNotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOrNotTests.swift; sourceTree = "<group>"; };
+		1A8BF1C825B03BD3003FF4F0 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				1A804ADF25AF3B5600EA059B /* MapViewController.swift */,
 				1A7E3C2325B0040800D00810 /* CityDetailsViewController.swift */,
 				1A7E3C3525B01DFF00D00810 /* CityTableViewCell.swift */,
+				1A8BF1C825B03BD3003FF4F0 /* UIViewController+Alert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				1A804AFF25AF4E1500EA059B /* HomeScreenViewModel.swift in Sources */,
 				1A804A8E25AEF4DF00EA059B /* HomeScreenViewController.swift in Sources */,
 				1A804AC625AF02E600EA059B /* FetchCity.swift in Sources */,
+				1A8BF1C925B03BD3003FF4F0 /* UIViewController+Alert.swift in Sources */,
 				1A804A8A25AEF4DF00EA059B /* AppDelegate.swift in Sources */,
 				1A7E3C1825B0012A00D00810 /* DayForecastTableViewCell.swift in Sources */,
 				1A804A8C25AEF4DF00EA059B /* SceneDelegate.swift in Sources */,

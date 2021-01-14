@@ -44,8 +44,11 @@ class CityDetailsViewController: UIViewController {
         self.viewModel?.fetchWeatherForecast(completion: { (result) in
                     
                     switch result {
+                    
                     case .failure(let error):
-                        break
+                        
+                        self.presentAlert(title: "Alert", message: error.localizedDescription)
+                        
                     case .success(let forecasts):
                         self.viewModel?.forecast = forecasts
                         

@@ -99,8 +99,8 @@ extension HomeScreenViewController: UISearchBarDelegate {
             
             switch result {
             
-            case .failure:
-                break // TODO: remove and set ui alert to user
+            case .failure(let error):
+                self?.presentAlert(title: "Alert", message: error.localizedDescription)
             
             case .success(let city):
                 
@@ -186,13 +186,10 @@ extension HomeScreenViewController: MapViewDelegate {
             
             switch result {
             case .failure:
-                // TODO: Alert
-                 
-                print("Failed to add from map")
-                break
+                   
+                self.presentAlert(title: "Alert", message: "Failed to add from map")
             
             case .success(let city):
-                print(city)
                 guard let city = city else { return }
                 
                 self.viewModel.bookmarks.append(city)

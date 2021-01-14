@@ -31,8 +31,6 @@ class HomeScreenViewModel {
                     
                     do {
                         let city = try JSONDecoder().decode(FetchCity.self, from: data)
-                         // TODO: Remove
-                        print(city)
                         completion(.success(city))
                         
                     } catch {
