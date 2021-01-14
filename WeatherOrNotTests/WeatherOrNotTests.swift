@@ -1,17 +1,16 @@
 //
-//  WeatherOrNotTests.swift
+//  WeatherOrNotUnitTests.swift
 //  WeatherOrNotTests
 //
-//  Created by Barney on 13/01/2021.
+//  Created by Barney on 14/01/2021.
 //
 
 import CoreLocation
 import XCTest
-@testable import WeatherOrNot
 
-class WeatherOrNotTests: XCTestCase {
-    
-    let location = CLLocation(latitude: 35, longitude: 135)
+class WeatherOrNotUnitTests: XCTestCase {
+
+    let location = CLLocation(latitude: 108, longitude: 210)
     
     var viewModel = HomeScreenViewModel()
     var cityViewModel: CityDetailsViewModel?
@@ -69,4 +68,5 @@ class WeatherOrNotTests: XCTestCase {
             }
         })
     }
+
 }

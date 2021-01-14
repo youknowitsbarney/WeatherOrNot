@@ -16,7 +16,7 @@ class HomeScreenViewModel {
     // MARK: Network call methods
     func fetchCityBy(name: String, completion: @escaping (Result<FetchCity?, Error>) -> Void) {
         
-        if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Nairobi&appid=75e5b9359048652cce8409bd9a56c380&units=metric") {
+        if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(name)&appid=75e5b9359048652cce8409bd9a56c380&units=metric") {
             
             var fetchRequest = URLRequest(url: url, timeoutInterval: .infinity)
             fetchRequest.httpMethod = "GET"

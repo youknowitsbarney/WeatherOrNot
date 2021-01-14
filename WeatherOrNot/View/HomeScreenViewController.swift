@@ -192,7 +192,7 @@ extension HomeScreenViewController: MapViewDelegate {
                 break
             
             case .success(let city):
-                
+                print(city)
                 guard let city = city else { return }
                 
                 self.viewModel.bookmarks.append(city)
