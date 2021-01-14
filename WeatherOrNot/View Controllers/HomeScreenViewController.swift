@@ -14,7 +14,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //: MARK: View Model Initialization
-    var viewModel: HomeScreenViewModel?
+    var viewModel: HomeScreenViewModel = .init()
     
     // MARK: IBActions
 //    @IBAction func addButtonTapped (sender: UIBarButtonItem) {
@@ -30,8 +30,11 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         setupNavigationBarItems()
+        searchBar.delegate = self
+        tableView.delegate = self
+//        tableView.datasource = self
     }
     
     // MARK: // UI Setup Methods
@@ -81,3 +84,83 @@ class HomeScreenViewController: UIViewController {
     }
 }
 
+
+
+// MARK: Search Bar Delegate Methods
+extension HomeScreenViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        self.searchBar.endEditing(true)
+        
+        self.viewModel.fetchCityBy(name: searchBar.text ?? "") { [weak self] (result) in
+            
+            switch result {
+            
+            case .failure:
+                break // TODO: remove and set ui alert to user
+            
+            case .success(let city):
+                
+                if let city = city {
+                    
+                    self?.viewModel.bookmarks.append(city)
+                    
+                    DispatchQueue.main.async {
+                        self?.tableView.reloadData()
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+// MARK: Table View Delegate Methods
+extension HomeScreenViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let cityDetailsViewController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "CityDetailsViewController") as? CityDetailsViewController else { return }
+        
+        let viewModel = CityDetailsViewModel(city: (self.viewModel.bookmarks[indexPath.row]))
+        
+        self.navigationController?.pushViewController(cityDetailsViewController, animated: true)
+        
+            if let navigationViewController = self.navigationController {
+                cityDetailsViewController.viewModel = viewModel
+                navigationViewController.pushViewController(cityDetailsViewController, animated: true)
+            }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 175
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            viewModel.bookmarks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+}
+
+//MARK: Table View Data Source Methods
+// TODO:
+
+//extension HomeScreenViewController: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        return viewModel.bookmarks.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        //
+//    }
+//}

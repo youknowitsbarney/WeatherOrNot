@@ -20,9 +20,7 @@
 		1A804ADB25AF2F6400EA059B /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804ADA25AF2F6400EA059B /* HelpPageViewController.swift */; };
 		1A804AE025AF3B5600EA059B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804ADF25AF3B5600EA059B /* MapViewController.swift */; };
 		1A804AEC25AF3D9400EA059B /* CityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804AEB25AF3D9400EA059B /* CityDetailsViewModel.swift */; };
-		1A804AF725AF4C0700EA059B /* HomeScreenVC+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804AF625AF4C0700EA059B /* HomeScreenVC+UISearchBarDelegate.swift */; };
 		1A804AFF25AF4E1500EA059B /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804AFE25AF4E1500EA059B /* HomeScreenViewModel.swift */; };
-		1A804B0825AF588300EA059B /* HomeScreenVC+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804B0725AF588300EA059B /* HomeScreenVC+UITableView.swift */; };
 		1A804B1525AF5A9500EA059B /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A804B1425AF5A9500EA059B /* CityDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,9 +60,7 @@
 		1A804ADA25AF2F6400EA059B /* HelpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPageViewController.swift; sourceTree = "<group>"; };
 		1A804ADF25AF3B5600EA059B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1A804AEB25AF3D9400EA059B /* CityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewModel.swift; sourceTree = "<group>"; };
-		1A804AF625AF4C0700EA059B /* HomeScreenVC+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenVC+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		1A804AFE25AF4E1500EA059B /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
-		1A804B0725AF588300EA059B /* HomeScreenVC+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenVC+UITableView.swift"; sourceTree = "<group>"; };
 		1A804B1425AF5A9500EA059B /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +116,6 @@
 				1A804B0325AF529400EA059B /* View Controllers */,
 				1A804AC025AEF5FB00EA059B /* View Models */,
 				1A804ABF25AEF5F000EA059B /* Models */,
-				1A804AF525AF4BD600EA059B /* ViewController Extensions */,
 				1A804A9225AEF4E300EA059B /* Assets.xcassets */,
 				1A804A9725AEF4E300EA059B /* Info.plist */,
 			);
@@ -170,15 +165,6 @@
 				1A804A9425AEF4E300EA059B /* LaunchScreen.storyboard */,
 			);
 			path = Interface;
-			sourceTree = "<group>";
-		};
-		1A804AF525AF4BD600EA059B /* ViewController Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				1A804AF625AF4C0700EA059B /* HomeScreenVC+UISearchBarDelegate.swift */,
-				1A804B0725AF588300EA059B /* HomeScreenVC+UITableView.swift */,
-			);
-			path = "ViewController Extensions";
 			sourceTree = "<group>";
 		};
 		1A804B0325AF529400EA059B /* View Controllers */ = {
@@ -324,13 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A804AFF25AF4E1500EA059B /* HomeScreenViewModel.swift in Sources */,
-				1A804AF725AF4C0700EA059B /* HomeScreenVC+UISearchBarDelegate.swift in Sources */,
 				1A804A8E25AEF4DF00EA059B /* HomeScreenViewController.swift in Sources */,
 				1A804AC625AF02E600EA059B /* FetchCity.swift in Sources */,
 				1A804AD625AF2F4F00EA059B /* SettingsPageViewController.swift in Sources */,
 				1A804A8A25AEF4DF00EA059B /* AppDelegate.swift in Sources */,
 				1A804A8C25AEF4DF00EA059B /* SceneDelegate.swift in Sources */,
-				1A804B0825AF588300EA059B /* HomeScreenVC+UITableView.swift in Sources */,
 				1A804ADB25AF2F6400EA059B /* HelpPageViewController.swift in Sources */,
 				1A804ACE25AF07B100EA059B /* Forecast.swift in Sources */,
 				1A804AEC25AF3D9400EA059B /* CityDetailsViewModel.swift in Sources */,
