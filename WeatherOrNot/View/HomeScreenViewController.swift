@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeScreenViewController: UIViewController {
     
@@ -15,48 +16,36 @@ class HomeScreenViewController: UIViewController {
     
     //: MARK: View Model Initialization
     var viewModel: HomeScreenViewModel = .init()
-    
-    // MARK: IBActions
-//    @IBAction func addButtonTapped (sender: UIBarButtonItem) {
-//
-//        if let mapViewController = UIStoryboard(name: "Main", bundle: nil)
-//            .instantiateViewController(withIdentifier: "MapViewController") as? MapViewController {
-//
-//            if let navigationViewController = self.navigationController {
-//                navigationViewController.pushViewController(mapViewController, animated: true)
-//            }
-//        }
-//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationBarItems()
+        tableViewSetup()
         searchBar.delegate = self
-        tableView.delegate = self
-//        tableView.datasource = self
+    
     }
     
     // MARK: // UI Setup Methods
     private func setupNavigationBarItems() {
         
         let help = UIImage(named: "help")
-        //        let settings = UIImage(named: "settings")
         
-        //        let settingsButton = self.createNavigationBarButton(selector: #selector(settingsButtonTapped(sender:)), image: settings)
         let helpButton = self.createNavigationBarButton(selector: #selector(helpButtonTapped(sender:)), image: help)
-        navigationItem.rightBarButtonItems = [helpButton]
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        addButton.tintColor = .black
+        navigationItem.rightBarButtonItems = [helpButton, addButton]
         
         
-        //    @objc private func settingsButtonTapped(sender: UIBarButtonItem) {
-        //
-        //        // TODO: Duplicate code!
-        //        if let settingsPageViewController = UIStoryboard(name: "Main", bundle: nil)
-        //            .instantiateViewController(withIdentifier: "SettingsPageViewController") as? SettingsPageViewController {
-        //            if let navigationViewController = self.navigationController {
-        //                  navigationViewController.pushViewController(settingsPageViewController, animated: true)
-        //              }
-        //          }
+        
+    }
+    
+    private func tableViewSetup() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+//        tableView.register(CityTableViewCell.self, forCellReuseIdentifier: "cityCell")
     }
     
     @objc private func helpButtonTapped(sender: UIBarButtonItem) {
@@ -68,6 +57,19 @@ class HomeScreenViewController: UIViewController {
             }
         }
     }
+    
+    @objc func addButtonTapped (sender: UIBarButtonItem) {
+    
+            if let mapViewController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "MapViewController") as? MapViewController {
+                
+                mapViewController.delegate = self
+    
+                if let navigationViewController = self.navigationController {
+                    navigationViewController.pushViewController(mapViewController, animated: true)
+                }
+            }
+        }
     
     private func createNavigationBarButton(selector: Selector, image: UIImage?) -> UIBarButtonItem {
         
@@ -127,8 +129,6 @@ extension HomeScreenViewController: UITableViewDelegate {
         
         let viewModel = CityDetailsViewModel(city: (self.viewModel.bookmarks[indexPath.row]))
         
-        self.navigationController?.pushViewController(cityDetailsViewController, animated: true)
-        
             if let navigationViewController = self.navigationController {
                 cityDetailsViewController.viewModel = viewModel
                 navigationViewController.pushViewController(cityDetailsViewController, animated: true)
@@ -151,16 +151,56 @@ extension HomeScreenViewController: UITableViewDelegate {
 }
 
 //MARK: Table View Data Source Methods
-// TODO:
 
-//extension HomeScreenViewController: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//        return viewModel.bookmarks.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        //
-//    }
-//}
+extension HomeScreenViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return viewModel.bookmarks.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let infoCell = tableView.dequeueReusableCell(withIdentifier: "cityPrototypeCell", for: indexPath) as? CityTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let city = viewModel.bookmarks[indexPath.row]
+        let tempString = String(Int(city.main.temp))
+
+        infoCell.cityNameLabel.text = city.name
+        infoCell.tempLabel.text = tempString
+        infoCell.weatherDescription.text = city.weather[0].main
+//        infoCell.weatherImage.image = ?
+        
+        return infoCell
+    }
+}
+
+// MARK: Extension MapViewDelegate
+extension HomeScreenViewController: MapViewDelegate {
+    
+    func locationSelected(location: CLLocation) {
+        
+        viewModel.fetchCityBy(location: location) { (result) in
+            
+            switch result {
+            case .failure:
+                // TODO: Alert
+                 
+                print("Failed to add from map")
+                break
+            
+            case .success(let city):
+                
+                guard let city = city else { return }
+                
+                self.viewModel.bookmarks.append(city)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+}

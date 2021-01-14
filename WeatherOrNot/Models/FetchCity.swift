@@ -23,6 +23,13 @@ struct FetchCity: Codable {
     let timezone, id: Int
     let name: String
     let cod: Int
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case weather, base, main, visibility, wind
+        case clouds, dt, sys, timezone, id, name, cod
+        case coordinates = "coord"
+    }
 }
 
 //MARK: Coordinates

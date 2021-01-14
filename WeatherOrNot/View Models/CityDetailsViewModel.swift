@@ -20,11 +20,7 @@ class CityDetailsViewModel {
     func fetchWeatherForecast(completion: @escaping (Result<Forecast?, Error>) -> Void) {
         
         if let url = URL(
-            string: """
-                    https://api.openweathermap.org/data/2.5/forecast/daily\
-                    ?lat=\(city.coordinates.latitude)&lon=\(city.coordinates.longitude)\
-                    &cnt=5&appid=75e5b9359048652cce8409bd9a56c380
-                    """) {
+            string: "https://api.openweathermap.org/data/2.5/forecast/daily?lat=\(city.coordinates.latitude)&lon=\(city.coordinates.longitude)&cnt=5&appid=75e5b9359048652cce8409bd9a56c380&units=metric") {
             
             var fetchRequest = URLRequest(url: url)
             fetchRequest.httpMethod = "GET"

@@ -21,14 +21,14 @@ struct Forecast: Codable {
 struct List: Codable {
     
     let dt, pressure, seaLevel, groundLevel, humidity, visibility: Int
-    let temp, feelsLike, min, max, tempKf, pop: Double
+    let temp, feelsLike, min, max, tempKf, pop, speed: Double
     let weather: [Weather]
     let clouds: [Clouds]
     let wind: [Wind]
     
     enum CodingKeys: String, CodingKey {
         
-        case dt, temp, pressure, humidity, pop, weather, clouds, wind, visibility
+        case dt, temp, pressure, humidity, pop, weather, clouds, wind, visibility, speed
         case seaLevel = "sea_level"
         case groundLevel = "ground_level"
         case min = "temp_min"
@@ -49,5 +49,14 @@ struct City: Codable {
         
         case id, population, timezone, sunrise, sunset, name, country
         case coordinates = "coord"
+    }
+}
+
+// Extensions
+extension List {
+    
+    var details: [String: Any] {
+        
+            ["Humidity": self.humidity, "Rain Chance": self.weather[0].description, "Wind Speed": self.speed] as [String : Any]
     }
 }

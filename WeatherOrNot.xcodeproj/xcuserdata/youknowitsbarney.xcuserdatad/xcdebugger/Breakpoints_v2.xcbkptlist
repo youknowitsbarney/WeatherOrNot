@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6BD36E9F-7FF2-4E9F-B42F-ABC3CAF6B1E5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeatherOrNot/View Models/HomeScreenViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "fetchCityBy(name:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C4308EDA-611B-41A5-A8B9-0C41AB834731"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -65,22 +49,6 @@
             startingLineNumber = "94"
             endingLineNumber = "94"
             landmarkName = "searchBarSearchButtonClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61A5221F-FDC5-4C28-A974-B07B1D4264CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeatherOrNot/View Models/HomeScreenViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "fetchCityBy(name:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -128,6 +96,245 @@
                   startingLineNumber = "96"
                   endingLineNumber = "96"
                   offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "556A8ECF-C6EC-4D79-85C6-8B0D7A647D72"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "locationSelected(location:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "556A8ECF-C6EC-4D79-85C6-8B0D7A647D72 - 9d5830e453b9c951"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;WeatherOrNot.FetchCity&gt;, Swift.Error&gt;) -&gt; () in WeatherOrNot.HomeScreenViewController.locationSelected(location: __C.CLLocation) -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "202">
+               </Location>
+               <Location
+                  uuid = "556A8ECF-C6EC-4D79-85C6-8B0D7A647D72 - 9d5830e453b9c951"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;WeatherOrNot.FetchCity&gt;, Swift.Error&gt;) -&gt; () in WeatherOrNot.HomeScreenViewController.locationSelected(location: __C.CLLocation) -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1AC92C6-9BDC-41CD-BDEF-C52635A11E8B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "locationSelected(location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE74B68F-C2D6-4AFF-BFF5-831F8D7B696E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View Models/HomeScreenViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchCityBy(location:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA93A425-27E4-48A2-844C-6F44D16E36A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "locationSelected(location:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FA93A425-27E4-48A2-844C-6F44D16E36A1 - 4ab1278389b17968"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherOrNot.HomeScreenViewController.locationSelected(location: __C.CLLocation) -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "FA93A425-27E4-48A2-844C-6F44D16E36A1 - 9d5830e453b9c951"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;WeatherOrNot.FetchCity&gt;, Swift.Error&gt;) -&gt; () in WeatherOrNot.HomeScreenViewController.locationSelected(location: __C.CLLocation) -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "202">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24A0F401-EE82-4452-A213-868CF5AA7DEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View/CityDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6318668F-633C-412D-9B31-59A11E643AFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View Models/CityDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchWeatherForecast(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBC7FCEA-8AAE-4420-B66F-E90C03B3D070"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View/CityDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchForecast()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F36622C-69E0-4B38-A217-C119218CBC23"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherOrNot/View/CityDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "fetchForecast()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F36622C-69E0-4B38-A217-C119218CBC23 - 58a1c068d7a7a195"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;WeatherOrNot.Forecast&gt;, Swift.Error&gt;) -&gt; () in WeatherOrNot.CityDetailsViewController.(fetchForecast in _8AD8CA00D585CD26C8C4DEFD5AB7C617)() -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/CityDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "202">
+               </Location>
+               <Location
+                  uuid = "7F36622C-69E0-4B38-A217-C119218CBC23 - 58a1c068d7a7a195"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;WeatherOrNot.Forecast&gt;, Swift.Error&gt;) -&gt; () in WeatherOrNot.CityDetailsViewController.(fetchForecast in _8AD8CA00D585CD26C8C4DEFD5AB7C617)() -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/CityDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "249">
+               </Location>
+               <Location
+                  uuid = "7F36622C-69E0-4B38-A217-C119218CBC23 - 58a1c068d7a7a195"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;WeatherOrNot.Forecast&gt;, Swift.Error&gt;) -&gt; () in WeatherOrNot.CityDetailsViewController.(fetchForecast in _8AD8CA00D585CD26C8C4DEFD5AB7C617)() -&gt; ()"
+                  moduleName = "WeatherOrNot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youknowitsbarney/Desktop/WeatherOrNot/WeatherOrNot/View/CityDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "268">
                </Location>
             </Locations>
          </BreakpointContent>
