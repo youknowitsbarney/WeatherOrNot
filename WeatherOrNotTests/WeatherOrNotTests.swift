@@ -6,7 +6,7 @@
 //
 
 import CoreLocation
-//import XCTest
+import XCTest
 
 class WeatherOrNotUnitTests: XCTestCase {
 
